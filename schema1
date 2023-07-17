@@ -1,0 +1,1772 @@
+[
+  {
+    "category": "section",
+    "id": "basic_info_section",
+    "label": "Basic Information",
+    "children": [
+      {
+        "rir_field_names": [
+          "sender_name"
+        ],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_name",
+        "label": "Supplier Name",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "supplier_name_master",
+        "label": "Supplier Name (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "supplier_number_master",
+        "label": "Supplier Number (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [
+          "document_id"
+        ],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "document_id",
+        "label": "Invoice #",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "date_issue"
+        ],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "date_issue",
+        "label": "Invoice Date",
+        "type": "date",
+        "format": "D/M/YYYY"
+      },
+      {
+        "rir_field_names": [
+          "terms"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "paymrnt_terms",
+        "label": "Payment Terms",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "payment_terms_master",
+        "label": "Payment Terms (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [
+          "currency"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "currency",
+        "label": "Currency",
+        "type": "enum",
+        "options": [
+          {
+            "value": "usd",
+            "label": "USD"
+          },
+          {
+            "value": "gbp",
+            "label": "GBP"
+          },
+          {
+            "value": "eur",
+            "label": "EUR"
+          },
+          {
+            "value": "czk",
+            "label": "CZK"
+          },
+          {
+            "value": "nok",
+            "label": "NOK"
+          },
+          {
+            "value": "sek",
+            "label": "SEK"
+          },
+          {
+            "value": "aud",
+            "label": "AUD"
+          },
+          {
+            "value": "huf",
+            "label": "HUF"
+          },
+          {
+            "value": "inr",
+            "label": "INR"
+          },
+          {
+            "value": "dkk",
+            "label": "DKK"
+          },
+          {
+            "value": "chf",
+            "label": "CHF"
+          },
+          {
+            "value": "cny",
+            "label": "CNY"
+          },
+          {
+            "value": "jpy",
+            "label": "JPY"
+          },
+          {
+            "value": "pln",
+            "label": "PLN"
+          },
+          {
+            "value": "ron",
+            "label": "RON"
+          },
+          {
+            "value": "rub",
+            "label": "RUB"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ]
+      },
+      {
+        "rir_field_names": [
+          "document_type"
+        ],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "document_type",
+        "label": "Document Type",
+        "type": "enum",
+        "options": [
+          {
+            "value": "tax_invoice",
+            "label": "Tax Invoice"
+          },
+          {
+            "value": "credit_note",
+            "label": "Credit Note"
+          },
+          {
+            "value": "proforma",
+            "label": "Pro Forma Invoice"
+          },
+          {
+            "value": "debit_note",
+            "label": "Debit Note"
+          },
+          {
+            "value": "receipt",
+            "label": "Receipt"
+          },
+          {
+            "value": "delivery_note",
+            "label": "Delivery Note"
+          },
+          {
+            "value": "order",
+            "label": "Order"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ]
+      },
+      {
+        "rir_field_names": [
+          "order_id"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "order_id",
+        "label": "PO",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "order_header_id",
+        "label": "PO Header ID",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": true
+        },
+        "default_value": "new",
+        "category": "datapoint",
+        "id": "status",
+        "label": "Status Fixed",
+        "hidden": true,
+        "type": "enum",
+        "options": [
+          {
+            "value": "new",
+            "label": "new"
+          },
+          {
+            "value": "voided",
+            "label": "voided"
+          },
+          {
+            "value": "empty",
+            "label": "empty"
+          }
+        ]
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "warranty_holdback_master",
+        "label": "Warranty holdback (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [
+          "date_due"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "date_due",
+        "label": "Due Date",
+        "hidden": true,
+        "type": "date",
+        "format": "D.M.YYYY"
+      },
+      {
+        "rir_field_names": [
+          "language"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "language",
+        "label": "Document Language",
+        "hidden": true,
+        "type": "enum",
+        "options": [
+          {
+            "value": "eng",
+            "label": "EN"
+          },
+          {
+            "value": "deu",
+            "label": "DE"
+          },
+          {
+            "value": "ces",
+            "label": "CZ"
+          },
+          {
+            "value": "esp",
+            "label": "ESP"
+          },
+          {
+            "value": "slk",
+            "label": "SK"
+          },
+          {
+            "value": "fra",
+            "label": "FR"
+          },
+          {
+            "value": "dan",
+            "label": "DAN"
+          },
+          {
+            "value": "fin",
+            "label": "FIN"
+          },
+          {
+            "value": "hun",
+            "label": "HUN"
+          },
+          {
+            "value": "swe",
+            "label": "SWE"
+          },
+          {
+            "value": "ital",
+            "label": "ITAL"
+          },
+          {
+            "value": "nor",
+            "label": "NOR"
+          },
+          {
+            "value": "pol",
+            "label": "POL"
+          },
+          {
+            "value": "por",
+            "label": "POR"
+          },
+          {
+            "value": "other",
+            "label": "Other"
+          }
+        ]
+      },
+      {
+        "rir_field_names": [
+          "customer_id"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "customer_id",
+        "label": "Customer ID",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "date_uzp"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "date_uzp",
+        "label": "Tax Point Date",
+        "hidden": true,
+        "type": "date",
+        "can_export": false,
+        "format": "D.M.YYYY"
+      },
+      {
+        "rir_field_names": [
+          "sender_order_id"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_order_id",
+        "label": "Vendor Order ID",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "delivery_note_id"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "delivery_note_id",
+        "label": "Delivery Note ID",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "supply_place"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "supply_place",
+        "label": "Place of Supply",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "full_page_text"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "full_page_text",
+        "label": "Full Page Text",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "email_body:text_plain"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "order_id_email",
+        "label": "PO (email)",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "order_id_email_extracted",
+        "label": "PO (email extracted)",
+        "type": "string"
+      },
+      {
+        "category": "multivalue",
+        "id": "segment_3_dw_multi",
+        "label": "Segment 3 (DW)",
+        "children": {
+          "rir_field_names": [],
+          "constraints": {
+            "required": false
+          },
+          "default_value": null,
+          "category": "datapoint",
+          "id": "segment_3_dw_mono",
+          "label": "Segment 3 (DW)",
+          "type": "string",
+          "can_export": false
+        },
+        "min_occurrences": null,
+        "max_occurrences": null,
+        "default_value": null,
+        "show_grid_by_default": false,
+        "rir_field_names": null
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "payment_info_section",
+    "label": "Payment Instructions",
+    "children": [
+      {
+        "rir_field_names": [
+          "iban"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "iban",
+        "label": "IBAN",
+        "type": "string",
+        "can_export": true
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "iban_normalized",
+        "label": "IBAN Normalized",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "sender_vat_id"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "tva_id",
+        "label": "TVA ID",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "tva_id_normalized",
+        "label": "TVA ID (Normalized)",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "account_num"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "account_num",
+        "label": "Account Number",
+        "hidden": true,
+        "type": "string",
+        "can_export": true
+      },
+      {
+        "rir_field_names": [
+          "bank_num"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bank_num",
+        "label": "Bank Code",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "bic"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bic",
+        "label": "BIC/SWIFT",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "const_sym"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "const_sym",
+        "label": "Constant Symbol",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "var_sym"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "var_sym",
+        "label": "Payment Reference",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "spec_sym"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "spec_sym",
+        "label": "Specific Symbol",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "payment_method"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "payment_method",
+        "label": "Payment Method",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "amounts_section",
+    "label": "VAT & Amounts",
+    "children": [
+      {
+        "rir_field_names": [
+          "amount_due"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_due",
+        "label": "Amount Due",
+        "type": "number",
+        "can_export": false,
+        "format": "# ##0.#"
+      },
+      {
+        "rir_field_names": [
+          "amount_total"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_total",
+        "label": "Total Amount",
+        "type": "number",
+        "format": "# ##0.#"
+      },
+      {
+        "rir_field_names": [
+          "amount_total_base"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_total_base",
+        "label": "Total Without Tax",
+        "hidden": true,
+        "type": "number",
+        "format": "# ##0.#"
+      },
+      {
+        "rir_field_names": [
+          "amount_total_tax"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_total_tax",
+        "label": "Total Tax",
+        "hidden": true,
+        "type": "number",
+        "format": "# ##0.#"
+      },
+      {
+        "rir_field_names": [
+          "amount_rounding"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_rounding",
+        "label": "Amount Rounding",
+        "hidden": true,
+        "type": "number",
+        "can_export": false,
+        "format": "# ##0.#"
+      },
+      {
+        "rir_field_names": [
+          "amount_paid"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "amount_paid",
+        "label": "Amount Paid",
+        "hidden": true,
+        "type": "number",
+        "can_export": false,
+        "format": "# ##0.#"
+      },
+      {
+        "category": "multivalue",
+        "id": "tax_details",
+        "label": "VAT Rates",
+        "hidden": true,
+        "children": {
+          "category": "tuple",
+          "id": "tax_detail",
+          "label": "VAT Rates",
+          "hidden": true,
+          "children": [
+            {
+              "rir_field_names": [
+                "tax_detail_rate"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "tax_detail_rate",
+              "label": "VAT Rate",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "tax_detail_base"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "tax_detail_base",
+              "label": "VAT Base",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "tax_detail_tax"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "tax_detail_tax",
+              "label": "VAT Amount",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "tax_detail_total"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "tax_detail_total",
+              "label": "VAT Total",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#"
+            }
+          ],
+          "rir_field_names": []
+        },
+        "min_occurrences": null,
+        "max_occurrences": 4,
+        "default_value": null,
+        "show_grid_by_default": false,
+        "rir_field_names": [
+          "tax_details"
+        ]
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "vendor_section",
+    "label": "Vendor & Customer",
+    "children": [
+      {
+        "rir_field_names": [
+          "sender_address"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_address",
+        "label": "Supplier Address",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "sender_ic"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_ic",
+        "label": "Supplier SIRET",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "recipient_name"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_name_raw",
+        "label": "Customer Name Raw",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_name",
+        "label": "Customer Name Populated",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": true
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "customer_name_normalized",
+        "label": "Customer Name Normalized",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [
+          "sender_vat_id",
+          "sender_dic"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_vat_id",
+        "label": "Vendor VAT Number",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "sender_email"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "sender_email",
+        "label": "Vendor Email",
+        "hidden": true,
+        "type": "string",
+        "can_export": false
+      },
+      {
+        "rir_field_names": [
+          "recipient_address"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_address",
+        "label": "Customer Address",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "recipient_ic"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_ic",
+        "label": "Customer Company ID",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "recipient_vat_id",
+          "recipient_dic"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_vat_id",
+        "label": "Customer VAT Number",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "recipient_delivery_name"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_delivery_name",
+        "label": "Customer Delivery Name",
+        "hidden": true,
+        "type": "string"
+      },
+      {
+        "rir_field_names": [
+          "recipient_delivery_address"
+        ],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "recipient_delivery_address",
+        "label": "Customer Delivery Address",
+        "hidden": true,
+        "type": "string"
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "line_items_section",
+    "label": "Line Items",
+    "children": [
+      {
+        "category": "multivalue",
+        "id": "line_items",
+        "label": "Line Item",
+        "children": {
+          "category": "tuple",
+          "id": "line_item",
+          "label": "Line Item",
+          "children": [
+            {
+              "rir_field_names": [
+                "table_column_code"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_code",
+              "label": "Code",
+              "type": "string"
+            },
+            {
+              "width": 50,
+              "rir_field_names": [
+                "table_column_description"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_description",
+              "label": "Description",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [
+                "table_column_quantity"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_quantity",
+              "label": "Quantity",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "table_column_uom"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_uom",
+              "label": "UOM",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [
+                "table_column_amount_base"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_amount_base",
+              "label": "Unit Price Base",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "table_column_amount"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_amount",
+              "label": "Unit Price",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "width": 15,
+              "rir_field_names": [
+                "table_column_amount_total"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_amount_total",
+              "label": "Total Amount",
+              "type": "number",
+              "format": "# ##0.#",
+              "aggregations": {
+                "sum": {
+                  "label": "Sum"
+                }
+              }
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "budget_period_master",
+              "label": "Budget Period (Master)",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [
+                "table_column_rate"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_rate",
+              "label": "VAT Rate",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [
+                "table_column_tax"
+              ],
+              "constraints": {
+                "required": true
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax",
+              "label": "VAT",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "width": 15,
+              "rir_field_names": [
+                "table_column_amount_total_base"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_total_base",
+              "label": "Total Base",
+              "hidden": true,
+              "type": "number",
+              "can_export": false,
+              "format": "# ##0.#",
+              "aggregations": {
+                "sum": {
+                  "label": "Sum"
+                }
+              }
+            },
+            {
+              "rir_field_names": [
+                "table_column_other"
+              ],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_other",
+              "label": "Other",
+              "hidden": true,
+              "type": "string",
+              "can_export": false
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_segment_1",
+              "label": "Segment 1",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": "OPEX",
+              "category": "datapoint",
+              "id": "item_segment_2",
+              "label": "Segment 2",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_segment_3_dw",
+              "label": "Segment 3 (DW)",
+              "type": "string",
+              "can_export": false
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_segment_3",
+              "label": "Segment 3",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_segment_4",
+              "label": "Segment 4",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": "NA",
+              "category": "datapoint",
+              "id": "item_segment_5",
+              "label": "Segment 5",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_segment_6",
+              "label": "Segment 6",
+              "type": "enum",
+              "options": []
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_line_number",
+              "label": "Line number",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_type",
+              "label": "Type",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_po_line",
+              "label": "PO Line",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_po_number",
+              "label": "PO Number",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax_code",
+              "label": "Tax Code",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax_rate",
+              "label": "Tax Rate",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax_amount",
+              "label": "Tax Amount",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax_supply_date",
+              "label": "Tax Supply Date",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_handling_amount",
+              "label": "Handling Amount",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_misc_amount",
+              "label": "Misk Amount",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_shipping_amount",
+              "label": "Shipping Amount",
+              "type": "number",
+              "format": "# ##0.#"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_line_level_taxation",
+              "label": "Line Level Taxation",
+              "type": "string"
+            },
+            {
+              "rir_field_names": [],
+              "constraints": {
+                "required": false
+              },
+              "default_value": null,
+              "category": "datapoint",
+              "id": "item_tax_rate_type",
+              "label": "Tax Rate Type",
+              "type": "string"
+            }
+          ],
+          "rir_field_names": []
+        },
+        "min_occurrences": null,
+        "max_occurrences": null,
+        "default_value": null,
+        "show_grid_by_default": false,
+        "rir_field_names": [
+          "line_items"
+        ]
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "other_section",
+    "label": "Other",
+    "children": [
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "notes",
+        "label": "Internal Notes",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "header_description_master",
+        "label": "Header Description",
+        "type": "string"
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "intervention_request_number_gmao",
+        "label": "Intervention Request Number - GMAO",
+        "type": "number",
+        "format": "# ##0.#"
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "bill_to_ship_to_master_data",
+    "label": "Bill To & Ship To",
+    "children": [
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_id_master",
+        "label": "Bill To Address Id (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_legal_entity_name_master",
+        "label": "Bill To Address Legal Entity Name (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_street_master",
+        "label": "Bill To Address Street (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_city_master",
+        "label": "Bill To Address City (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_postal_code_master",
+        "label": "Bill To Address Postal Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_country_code_master",
+        "label": "Bill To Address Country Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "bill_to_address_location_code_master",
+        "label": "Bill To Address Location Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "buyer_vat_id_master",
+        "label": "Buyer VAT ID (Master)",
+        "type": "enum",
+        "options": []
+      }
+    ],
+    "icon": null
+  },
+  {
+    "category": "section",
+    "id": "remit_to_master_data",
+    "label": "Remit To",
+    "children": [
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_master",
+        "label": "Remit To (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_street1_master",
+        "label": "Remit To Address Street1 (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_street2_master",
+        "label": "Remit To Address Street2 (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_city_master",
+        "label": "Remit To Address City (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_state_master",
+        "label": "Remit To Address State (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_postal_code_master",
+        "label": "Remit To Address Postal Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_address_country_code_master",
+        "label": "Remit To Address Country Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_tax_prefix_master",
+        "label": "Remit To Tax Prefix (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_tax_number_master",
+        "label": "Remit To Tax Number (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_tax_country_code_master",
+        "label": "Remit To Tax Country Code (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_local_tax_number_master",
+        "label": "Remit To Local Tax Number (Master)",
+        "type": "enum",
+        "options": []
+      },
+      {
+        "rir_field_names": [],
+        "constraints": {
+          "required": false
+        },
+        "default_value": null,
+        "category": "datapoint",
+        "id": "remit_to_vat_id_master",
+        "label": "Remit To VAT ID (Master)",
+        "type": "enum",
+        "options": []
+      }
+    ],
+    "icon": null
+  }
+]
